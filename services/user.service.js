@@ -12,7 +12,6 @@ class UserService {
   async find() {
     const client = await getConnection();
     const rta = await client.query('SELECT * FROM tasks');
-    console.log('pase por el find');
     return rta.rows;
   }
 
